@@ -13,7 +13,7 @@
 <body>
 
     <header>
-        <nav class="navbar bg-dark navbar-expand-lg bg-body-tertiary d-flex" data-bs-theme="dark">
+        <nav class="navbar bg-dark navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
             <div class="container-fluid">
                 <a class="navbar-brand p-2 mx-5" href="#">Bool factory</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -21,7 +21,7 @@
                     aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse d-flex justify-content-end mx-5" id="navbarNavAltMarkup">
+                <div class="collapse navbar-collapse justify-content-end mx-5" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
                         <a class="nav-link disabled p-2" aria-disabled="true">Home</a>
                         <a class="nav-link disabled p-2" aria-disabled="true">Servizi</a>
@@ -40,39 +40,49 @@
                     <section class="titolo">
                         <h1>Richiesta Preventivo</h1>
                         <p>Compila il form per richiedere un preventivo per i nostri servizi di sviluppo.</p>
-                        <div class="mb-3">
-                            <label for="exampleFormControlInput1" class="form-label">Nome</label>
-                            <input type="nome" class="form-control" id="Nome">
-                            <label for="exampleFormControlInput2" class="form-label">Cognome</label>
-                            <input type="cognome" class="form-control" id="Cognome">
-                            <label for="exampleFormControlInput3" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="Email">
-                        </div>
-                        <div class="mb-3">
-                            <label for="exampleFormControlInput1" type="select" id="select" class="form-label">Tipo di
-                                Lavoro</label>
-                            <select class="form-select" aria-label="Default select example">
-                                <option selected>Seleziona il tipo di lavoro</option>
-                                <option value="1">Backed Development</option>
-                                <option value="2">Frontend Development</option>
-                                <option value="3">Project Analysis</option>
-                            </select>
-                        </div>
-                        <div class="mb-3">
-                            <label for="Textarea" class="form-label">Textarea con bootstrap 5</label>
-                            <textarea class="form-control" id="Textarea" rows="3"></textarea>
-                        </div>
-                        <div class="mb-3">
-                            <label for="exampleFormControlInput1" class="form-label">Codice promozionale
-                                (Opzionale)</label>
-                            <input type="CodProm" class="form-control" id="CodProm">
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                            <label class="form-check-label" for="flexCheckDefault">
-                                Accetto la Privacy Policy
-                            </label>
-                        </div>
+                        <form>
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">Nome</label>
+                                <input type="nome" class="form-control" id="Nome">
+                                <label for="exampleFormControlInput2" class="form-label">Cognome</label>
+                                <input type="cognome" class="form-control" id="Cognome">
+                                <label for="exampleFormControlInput3" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="Email">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" type="select" id="select" class="form-label">Tipo
+                                    di
+                                    Lavoro</label>
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected>Seleziona il tipo di lavoro</option>
+                                    <option value="1">Backed Development</option>
+                                    <option value="2">Frontend Development</option>
+                                    <option value="3">Project Analysis</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="Textarea" class="form-label">Textarea con bootstrap 5</label>
+                                <textarea class="form-control" id="Textarea" rows="3"></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">Codice promozionale
+                                    (Opzionale)</label>
+                                <input type="CodProm" class="form-control" id="CodProm">
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    Accetto la Privacy Policy
+                                </label>
+                            </div>
+                            <div class="d-flex align-items-center d-flex justify-content-around m-5">
+                                <button type="button" class="btn btn-primary btn-sm">Calcola preventivo</button>
+                                <div>
+                                    <h5 class="fw-bold">Prezzo finale</h5>
+                                    <p class="Prezzo"> <strong>€ 200</strong><span class="zeri">,00</span></p>
+                                </div>
+                            </div>
+                        </form>
                     </section>
                 </div>
                 <div class="col-lg-3">
@@ -95,21 +105,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-7">
-                    <div class="d-flex align-items-center d-flex justify-content-around m-5">
-                        <button type="button" class="btn btn-primary btn-sm">Calcola preventivo</button>
-                        <div>
-                            <h5 class="fw-bold">Prezzo finale</h5>
-                            <p class="Prezzo"> <strong>€ 200</strong><span class="zeri">,00</span></p>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </main>
 
     <footer>
-        <nav class="navbar bg-dark p-3">
+        <nav class="navbar bg-dark navbar-expand-lg p-3">
             <div class="container-fluid d-flex justify-content-center">
                 <span class="navbar-text text-white">
                     &#169; 2024 - tutti i diritti riservati
