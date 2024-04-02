@@ -1,0 +1,17 @@
+.titolo {
+    margin-top: 20px;
+    margin-left: -15px;
+}
+
+.card {
+    margin-top: 20px;
+}
+
+.Prezzo {
+    font-size: 20px;
+    text-align: center;
+}
+
+.zeri {
+    color: grey;
+}
