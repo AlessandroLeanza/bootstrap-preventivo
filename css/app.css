@@ -10,3 +10,11 @@
     font-size: 20px;
     text-align: center;
 }
+
+.navbar-nav {
+    margin-right: 13px;
+}
+
+.navbar-brand {
+    margin-left: 0px;
+}

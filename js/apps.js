@@ -1,28 +1,37 @@
 console.log("Bootstrap-Preventivo")
 
-// creo un array di tipi di lavoro
-const jobs = ['Backed Development', 'Frontend Development', 'Project Analysis']
-console.log(jobs);
+const codSconto = ['YHDNU32', 'JANJC63', 'PWKCN25', 'SJDPO96', 'POCIE24']
+const codiceInserito = document.getElementById('CodProm');
 
 // recupero dal document i tipi di lavoro
 const form = document.getElementById('tipo-di-lavoro')
 form.addEventListener('submit', tipoLavoro)
 
+prezzoElement = document.getElementById('prezzo')
+
 function tipoLavoro(e) {
     e.preventDefault()
     const job = document.getElementById('job').value
-    console.log(job);
     // creiamo un controllo ai tipi di lavoro e inseriamo i valori nel document
+    let prezzo = 0;
     if (job === 'Backed Development') {
-        const prezzo = 20.50 * 10
-        console.log(document.getElementById('prezzo').innerHTML = '€ ' + prezzo + ',00');
+        prezzo = 20.50 * 10
     } else if (job === 'Frontend Development') {
-        const prezzo = 15.30 * 10
-        console.log(document.getElementById('prezzo').innerHTML = '€ ' + prezzo + ',00');
+        prezzo = 15.30 * 10
     } else if (job === 'Project Analysis') {
-        const prezzo = 33.60 * 10
-        console.log(document.getElementById('prezzo').innerHTML = '€ ' + prezzo + ',00');
-    } else {
-        console.log(document.getElementById('prezzo').innerHTML = 'Nessun lavoro selezionato');
+        prezzo = 33.60 * 10
     }
+    const sconto = codiceInserito.value;
+    const controllo = codSconto.includes(sconto)
+    if (controllo) {
+        prezzo = prezzo * 0.75;
+        console.log(prezzo);
+    } else if (sconto == "") {
+
+    } else if (!controllo) {
+        alert('codice non valido')
+    }
+    prezzo = prezzo.toFixed(2)
+    prezzoElement.innerHTML = "&euro; " + prezzo;
 }
+
